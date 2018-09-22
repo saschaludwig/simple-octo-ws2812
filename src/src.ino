@@ -255,14 +255,14 @@ void fade_red(uint32_t* lastmillis, uint8_t* k, uint8_t* stage, uint8_t length) 
     switch (*stage) {
       case 0: {
           for (int i = 0; i < length; i++)  {
-            LED.setPixelColor(i, 0, 63 + *k, 0);
+            LED.setPixelColor(i, 63 + *k, 0, 0);
           }
           break;
         }
 
       case 1: {
           for (int i = 0; i < length; i++)  {
-            LED.setPixelColor(i, 0, 255 - *k, 0);
+            LED.setPixelColor(i, 255 - *k, 0, 0);
           }
           break;
         }
